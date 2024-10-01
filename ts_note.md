@@ -1,0 +1,1 @@
+http://localhost:8080/search?q=%E8%8A%B1&format=html
