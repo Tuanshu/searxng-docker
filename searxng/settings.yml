@@ -3,7 +3,7 @@ use_default_settings: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
   secret_key: "3304ac7e67704e8cfa64c5ab0adab2517c5a277062d92ef7a14d20b9e787d340"  # change this!
-  limiter: true  # can be disabled for a private instance
+  limiter: false  # can be disabled for a private instance
   image_proxy: true
 ui:
   static_use_hash: true
@@ -16,3 +16,47 @@ search:
     - csv
     - json
     - rss
+
+outgoing:
+  # default timeout in seconds, can be override by engine
+  request_timeout: 3.0
+  # the maximum timeout in seconds
+  # max_request_timeout: 10.0
+  # suffix of searx_useragent, could contain information like an email address
+  # to the administrator
+  useragent_suffix: ""
+  # The maximum number of concurrent connections that may be established.
+  pool_connections: 100
+  # Allow the connection pool to maintain keep-alive connections below this
+  # point.
+  pool_maxsize: 20
+  # See https://www.python-httpx.org/http2/
+  enable_http2: true
+  # uncomment below section if you want to use a custom server certificate
+  # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
+  # and https://www.python-httpx.org/compatibility/#ssl-configuration
+  verify: false
+  #
+  # uncomment below section if you want to use a proxyq see: SOCKS proxies
+  #   https://2.python-requests.org/en/latest/user/advanced/#proxies
+  # are also supported: see
+  #   https://2.python-requests.org/en/latest/user/advanced/#socks
+  #
+  #  proxies:
+  #    all://:
+  #      - http://proxy1:8080
+  #      - http://proxy2:8080
+  #
+  #  using_tor_proxy: true
+  #
+  # Extra seconds to add in order to account for the time taken by the proxy
+  #
+  #  extra_proxy_timeout: 10
+  #
+  # uncomment below section only if you have more than one network interface
+  # which can be the source of outgoing search requests
+  #
+  #  source_ips:
+  #    - 1.1.1.1
+  #    - 1.1.1.2
+  #    - fe80::/126
