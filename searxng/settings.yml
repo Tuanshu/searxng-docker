@@ -489,7 +489,7 @@ engines:
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
-    disabled: true # by TS
+    # disabled: true # by TS
 
   - name: duckduckgo images
     engine: duckduckgo_extra
@@ -686,6 +686,7 @@ engines:
     # additional_tests:
     #   android: *test_android
     number_of_results: 20
+    disabled: true
 
   - name: google images
     engine: google_images
