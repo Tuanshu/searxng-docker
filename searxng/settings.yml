@@ -489,7 +489,7 @@ engines:
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
-    # disabled: true # by TS
+    disabled: true # by TS
 
   - name: duckduckgo images
     engine: duckduckgo_extra
@@ -1337,7 +1337,7 @@ engines:
     categories: [general, web]
     additional_tests:
       rosebud: *test_rosebud
-    disabled: true # by TS
+    # disabled: true # by TS
 
   - name: qwant news
     qwant_categ: news
