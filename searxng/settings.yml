@@ -686,7 +686,7 @@ engines:
     # additional_tests:
     #   android: *test_android
     number_of_results: 20
-    disabled: true
+    # disabled: true
 
   - name: google images
     engine: google_images
@@ -1337,7 +1337,7 @@ engines:
     categories: [general, web]
     additional_tests:
       rosebud: *test_rosebud
-    # disabled: true # by TS
+    disabled: true # by TS
 
   - name: qwant news
     qwant_categ: news
