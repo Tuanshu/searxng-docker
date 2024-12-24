@@ -227,7 +227,7 @@ engines:
   - name: bing images
     engine: bing_images
     shortcut: bii
-    disabled: true # by TS
+    # disabled: true # by TS
 
   - name: bing news
     engine: bing_news
